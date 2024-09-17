@@ -30,7 +30,11 @@ document.getElementById('yearNow').textContent = new Date().getFullYear();
     return $(selector).length > 0;
   };
 
-  $(window).on('load', function () {
+  // $(window).on('load', function () {
+  //   preloader();
+  // });
+
+  $(document).ready(function () {
     preloader();
   });
 
