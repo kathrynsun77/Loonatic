@@ -88,15 +88,10 @@
 <!-- END JS PLUGIN -->
 <script type="text/javascript" src="assets/js/core.js"></script>
 <script>
-    function isIOS() {
-        return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    }
-
     var name = document.getElementById("name").innerHTML;
     var phone = document.getElementById("phone").innerHTML;
     var email = document.getElementById("email").innerHTML;
     var saveBtn = document.getElementById("save-btn");
-
     saveBtn.addEventListener("click", function () {
         var contact = {
             name: name,
@@ -104,27 +99,16 @@
             email: email
         };
 
-        if (isIOS()) {
-            var iosContactUrl = "contact://new/" +
-                encodeURIComponent(contact.name) +
-                ";company=Company%20Name" +
-                ";tel=" + encodeURIComponent(contact.phone) +
-                ";email=" + encodeURIComponent(contact.email);
-            window.location.href = iosContactUrl;
-        } else {
-            var vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name +
-                "\nTEL;TYPE=work,voice:" + contact.phone +
-                "\nEMAIL:" + contact.email + "\nEND:VCARD";
+        var vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nEND:VCARD";
+        var blob = new Blob([vcard], { type: "text/vcard" });
+        var url = URL.createObjectURL(blob);
 
-            var blob = new Blob([vcard], { type: "text/vcard" });
-            var url = URL.createObjectURL(blob);
+        const newLink = document.createElement('a');
+        newLink.download = contact.name + ".vcf";
+        newLink.textContent = contact.name;
+        newLink.href = url;
 
-            const newLink = document.createElement('a');
-            newLink.download = contact.name + ".vcf";
-            newLink.href = url;
-
-            newLink.click();
-        }
+        newLink.click();
     });
 </script>
 
