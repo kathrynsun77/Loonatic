@@ -1989,9 +1989,7 @@ label {
 .cs_accordian.cs_style_1.active {
   grid-row: span 2;
 }
-.cs_accordian.cs_style_1.active .cs_accordian_head {
-  pointer-events: none;
-}
+
 .cs_accordian.cs_style_1.active .cs_accordian_head::after {
   visibility: hidden;
   opacity: 0;

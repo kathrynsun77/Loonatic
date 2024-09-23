@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="ThemeDox">
+  <!-- Favicon Icon -->
+  <link rel="icon" href="assets/img/favicon.png">
+  <!-- Site Title -->
+  <title>Loonatic Style</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/slick.min.css">
+  <link rel="stylesheet" href="assets/css/odometer.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    @media (max-width: 1198px) {
+
+      .cs_cursor_lg,
+      .cs_cursor_sm {
+        display: none;
+      }
+
+      .top-logo {
+        margin-top: 30%;
+        margin-left: 5%;
+        width: 70%;
+      }
+
+      .cs_nav_list {
+        margin-top: 10px;
+      }
+
+      .cs_menu_toggle {
+        margin-top: 20%;
+      }
+    }
+
+    @media (max-width: 991px) {
+
+      .cs_cursor_lg,
+      .cs_cursor_sm {
+        display: none;
+      }
+
+      .cs_nav_list {
+        margin-top: 10px;
+      }
+
+      .cs_hero_in {
+        margin-top: 100%;
+      }
+    }
+
+    /* New styles for product details */
+    .product-details {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+
+    .product-images {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .product-info {
+      flex: 1;
+      min-width: 300px;
+      padding: 0 20px;
+    }
+
+    .product-title {
+      font-family: ADrip;
+      font-size: 36px;
+      -webkit-text-stroke: 0.5px #FF76E9;
+      margin-bottom: 20px;
+    }
+
+    .product-price {
+      font-family: Sprite;
+      font-size: 24px;
+      color: #FF76E9;
+      margin-bottom: 20px;
+    }
+
+    .product-description {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .size-selector {
+      margin-bottom: 20px;
+    }
+
+    .size-selector select {
+      width: 100%;
+      padding: 10px;
+      font-family: Sprite;
+      font-size: 18px;
+    }
+
+    .add-to-cart-btn {
+      background-color: #FF76E9;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-family: ADrip;
+      font-size: 24px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .add-to-cart-btn:hover {
+      background-color: #ff4dd2;
+    }
+
+    .selector-container {
+      margin-bottom: 20px;
+    }
+
+    .color-selector,
+    .size-selector {
+      display: flex;
+      gap: 10px;
+    }
+
+    .color-option,
+    .size-option {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .color-option:hover,
+    .size-option:hover {
+      transform: scale(1.1);
+    }
+
+    .color-option.selected,
+    .size-option.selected {
+      box-shadow: 0 0 0 2px #857b83;
+      color: #857b83;
+    }
+
+    .size-option {
+      /* background-color: #f0f0f0; */
+      box-shadow: 0 0 0 2px #ffffff;
+      display: flex;
+      color: #FFFFFF;
+      align-items: center;
+      justify-content: center;
+      font-family: Sprite, sans-serif;
+      font-size: 14px;
+    }
+    .size-chart {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .size-chart th, .size-chart td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  .size-chart th {
+    font-family: Roboto;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="cs_preloader cs_center cs_hero_shapes_1">
+    <div class="cs_preloader_in"></div>
+    <span>Loading</span>
+  </div>
+  <!-- Start Header Section -->
+  <header class="cs_site_header cs_style_1 cs_primary_color">
+    <div class="cs_main_header">
+      <div class="container">
+        <div class="cs_main_header_in"
+          style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+          <div class="cs_main_header_center" style="top:100px">
+            <a class="cs_site_branding" href="index.html">
+              <img src="assets/logo-footer.png" alt="Logo" class="top-logo">
+            </a>
+          </div>
+          <div class="cs_main_header_center"
+            style="top:200px; font-family: ADrip; font-size: 48px; -webkit-text-stroke: 0.5px #FF76E9;">
+            <div class="cs_nav">
+              <ul class="cs_nav_list">
+                <li><a href="#home"
+                    style="font-family: ADrip; font-size: 48px; -webkit-text-stroke: 0.5px #FF76E9;">Home</a></li>
+                <li class="menu-item-has-children">
+                  <a href=""
+                    style="font-family: ADrip; font-size: 48px;  -webkit-text-stroke: 0.5px #FF76E9;">Products</a>
+                  <ul style="font-family: ADrip; font-size: 35px; top:70px">
+                    <li><a href="blog.html"
+                        style="font-family: Sprite; font-size: 25px;  -webkit-text-stroke: 0.5px #FF76E9;">Latest
+                        Drop</a></li>
+                    <li><a href="blog-details.html"
+                        style="font-family: Sprite; font-size: 25px;  -webkit-text-stroke: 0.5px #FF76E9;">All
+                        Products</a></li>
+                  </ul>
+                </li>
+                <li><a href="#about"
+                    style="font-family: ADrip; font-size: 48px;  -webkit-text-stroke: 0.5px #FF76E9;">About</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="cs_height_80 cs_height_lg_80"></div>
+  <!-- End Header Section -->
+
+  <!-- Start Item Details Section -->
+  <section class="cs_shape_wrap cs_blog_shapes_1 position-relative" style="margin-top:7%">
+    <div class="cs_shape cs_shape_position_1"></div>
+    <div class="cs_shape cs_shape_position_2"></div>
+    <div class="cs_height_120 cs_height_lg_80"></div>
+    <div class="container wow fadeIn" data-wow-duration="1s" data-wow-delay="0.35s">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <div class="cs_blog_details">
+            <div class="cs_height_10 cs_height_lg_10"></div>
+            <h1 style="font-family: Sprite; -webkit-text-stroke: 0.5px #FF76E9;">Kelly</h1>
+            <div class="cs_height_15 cs_height_lg_15"></div>
+            <div class="row">
+              <div class="col-md-6">
+                <img src="assets/images/kelly.png" alt="Kelly" style="width: 100%;">
+              </div>
+              <div class="col-md-6">
+                <p style="font-family: Sprite; font-size: 40px; color: #FF76E9;">$79.99</p>
+
+                <div class="selector-container">
+                  <p style="font-family: Roboto; font-size: 18px;">Color:</p>
+                  <div class="color-selector">
+                    <div class="color-option" style="background-color: #FF76E9;" data-color="Pink"></div>
+                    <div class="color-option" style="background-color: #000000;" data-color="Black"></div>
+                    <div class="color-option" style="background-color: #FFFFFF; border: 1px solid #000;"
+                      data-color="White"></div>
+                  </div>
+                  <select id="color-select" name="color" style="display: none;">
+                    <option value="">Select Color</option>
+                    <option value="Pink">Pink</option>
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                  </select>
+                </div>
+
+                <div class="selector-container">
+                  <p style="font-family: Roboto; font-size: 18px;">Size:</p>
+                  <div class="size-selector">
+                    <div class="size-option" data-size="S">S</div>
+                    <div class="size-option" data-size="M">M</div>
+                    <div class="size-option" data-size="L">L</div>
+                  </div>
+                  <select id="size-select" name="size" style="display: none;">
+                    <option value="">Select Size</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                  </select>
+                </div>
+              <!-- Description Accordion -->
+                <div class="col-lg-12">
+                  <div class="cs_accordian cs_style_1">
+                    <h2 class="cs_accordian_head cs_semibold mb-0"
+                      style="font-family: Roboto, sans-serif; font-size: 20px; -webkit-text-stroke: 0.5px #FF76E9;">
+                     Description
+                      <span class="cs_accordian_toggle cs_center">
+                        <i class="fa-solid fa-chevron-down"></i>
+                      </span>
+                    </h2>
+                    <div class="cs_accordian_body" style="">
+                      <div class="row cs_gap_y_24">
+                        <p style="font-family: Roboto, sans-serif; font-size: 20px;">Unleash your inner loonatic with our Kelly top. This versatile piece features a unique design that's perfect for any occasion. Made with high-quality, comfortable fabric, it's sure to become your new favorite.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              <!-- Size Accordion -->
+              <div class="col-lg-12">
+                <div class="cs_accordian cs_style_1">
+                  <h2 class="cs_accordian_head cs_semibold mb-0"
+                    style="font-family: Roboto, sans-serif; font-size: 20px; -webkit-text-stroke: 0.5px #FF76E9;">
+                   Size Chart
+                    <span class="cs_accordian_toggle cs_center">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                  </h2>
+                  <div class="cs_accordian_body" style="">
+                    <div class="row cs_gap_y_24">
+                      <table class="size-chart">
+                        <thead>
+                          <tr>
+                            <th>Size</th>
+                            <th>Bust (cm)</th>
+                            <th>Waist (cm)</th>
+                            <th>Hip (cm)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>S</td>
+                            <td>86-90</td>
+                            <td>66-70</td>
+                            <td>92-96</td>
+                          </tr>
+                          <tr>
+                            <td>M</td>
+                            <td>90-94</td>
+                            <td>70-74</td>
+                            <td>96-100</td>
+                          </tr>
+                          <tr>
+                            <td>L</td>
+                            <td>94-98</td>
+                            <td>74-78</td>
+                            <td>100-104</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                <!-- <div class="cs_center" style="margin-top: 20px;">
+                  <a href="#" class="cs_btn cs_style_1 cs_white_color">
+                    <span> <i class="fa-solid fa-cart-shopping"></i> Add to cart</span>
+                  </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Item Details Section -->
+
+
+<!-- Start You May Also Like Section -->
+<section class="cs_shape_wrap cs_blog_shapes_1 position-relative" style="margin-top:7%; margin-bottom:-7%">
+  <div class="container wow fadeIn" data-wow-duration="1s" data-wow-delay="0.35s">
+    <h2 style="font-family: Sprite; -webkit-text-stroke: 0.5px #FF76E9; margin-bottom: 30px;">You May Also Like</h2>
+    <div class="row">
+      <!-- Product Card 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="cs_post cs_style_1">
+          <div class="cs_post_inner">
+            <a href="item-detail.html" class="cs_post_thumbnail cs_zoom">
+              <img src="assets/images/kelly.png" alt="Post Thumbnail" class="cs_zoom_in">
+            </a>
+            <div class="cs_post_content">
+              <div class="cs_post_meta_wrapper">
+                <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #8f33ff;"></div>
+                <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #1cceff;"></div>
+                <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #c7249e;"></div>
+                <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #FF5733;"></div>
+              </div>
+              <h3 class="cs_post_title cs_semibold mb-0"><a href="item-detail.html">Kelly</a></h3>
+              <p class="cs_post_subtitle cs_normal mb-0">Rp 120.000</p>
+              <a href="item-detail.html" class="cs_post_btn">
+                <span>Item Details</span>
+                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 2 (duplicate of Product Card 1 for illustration) -->
+      <div class="col-lg-4 col-md-6">
+        <div class="cs_post cs_style_1">
+          <div class="cs_post_inner">
+            <a href="item-detail.html" class="cs_post_thumbnail cs_zoom">
+              <img src="assets/images/kelly.png" alt="Post Thumbnail" class="cs_zoom_in">
+            </a>
+            <div class="cs_post_content">
+              <div class="cs_post_meta_wrapper">
+                <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #8f33ff;"></div>
+                <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #1cceff;"></div>
+                <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #c7249e;"></div>
+                <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #FF5733;"></div>
+              </div>
+              <h3 class="cs_post_title cs_semibold mb-0"><a href="item-detail.html">Kelly</a></h3>
+              <p class="cs_post_subtitle cs_normal mb-0">Rp 120.000</p>
+              <a href="item-detail.html" class="cs_post_btn">
+                <span>Item Details</span>
+                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 3 (duplicate of Product Card 1 for illustration) -->
+      <div class="col-lg-4 col-md-6">
+        <div class="cs_post cs_style_1">
+          <div class="cs_post_inner">
+            <a href="item-detail.html" class="cs_post_thumbnail cs_zoom">
+              <img src="assets/images/kelly.png" alt="Post Thumbnail" class="cs_zoom_in">
+            </a>
+            <div class="cs_post_content">
+              <div class="cs_post_meta_wrapper">
+                <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #8f33ff;"></div>
+                <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #1cceff;"></div>
+                <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #c7249e;"></div>
+                <div style="width: 30px; height: 30px; border-radius: 50%; background-color: #FF5733;"></div>
+              </div>
+              <h3 class="cs_post_title cs_semibold mb-0"><a href="item-detail.html">Kelly</a></h3>
+              <p class="cs_post_subtitle cs_normal mb-0">Rp 120.000</p>
+              <a href="item-detail.html" class="cs_post_btn">
+                <span>Item Details</span>
+                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End You May Also Like Section -->
+
+  <!-- Start Footer Section -->
+  <footer class="cs_footer cs_bg_filed cs_shape_wrap cs_footer_shapes_1">
+
+    <div class="container wow fadeIn" data-wow-duration="1s" data-wow-delay="0.35s">
+      <div class="cs_footer_row">
+        <div class="cs_footer_col">
+          <div class="cs_footer_widget">
+            <div class="cs_text_widget">
+              <img src="assets/logo-footer.png" alt="">
+              <p>Unleash your loonatic side</p>
+              <div class="cs_social_btns">
+                <a href="https://www.instagram.com/loonaticstyle/" target="_blank" class="cs_center"><i
+                    class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/message/6FCXLCOITHLBA1" target="_blank" class="cs_center"><i
+                    class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com/@loonaticstyle?_t=8oHXuv0VIxD&_r=1" target="_blank" class="cs_center"><i
+                    class="fa-brands fa-tiktok"></i></a>
+                <a href="http://shopee.co.id/loonaticstyle" target="_blank" class="cs_center"><i
+                    class="fa-solid fa-bag-shopping"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs_footer_col">
+          <div class="cs_footer_widget">
+            <h2 class="cs_footer_widget_title">Loonatic</h2>
+            <ul class="cs_footer_menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cs_footer_col">
+          <div class="cs_footer_widget">
+            <h2 class="cs_footer_widget_title">Data Protection</h2>
+            <ul class="cs_footer_menu">
+              <li><a href="#">Privacy & Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cs_footer_bottom">
+        <p class="mb-0 cs_copyright">Copyright <span id="yearNow"></span> Loonatic Style | All Right Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer Section -->
+
+  <!-- Script -->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/jquery.slick.min.js"></script>
+  <script src="assets/js/odometer.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const colorOptions = document.querySelectorAll('.color-option');
+      const sizeOptions = document.querySelectorAll('.size-option');
+      const colorSelect = document.getElementById('color-select');
+      const sizeSelect = document.getElementById('size-select');
+
+      function selectOption(options, clickedOption, selectElement) {
+        options.forEach(option => option.classList.remove('selected'));
+        clickedOption.classList.add('selected');
+        selectElement.value = clickedOption.dataset.color || clickedOption.dataset.size;
+      }
+
+      colorOptions.forEach(option => {
+        option.addEventListener('click', function () {
+          selectOption(colorOptions, this, colorSelect);
+        });
+      });
+
+      sizeOptions.forEach(option => {
+        option.addEventListener('click', function () {
+          selectOption(sizeOptions, this, sizeSelect);
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="ThemeDox">
+  <!-- Favicon Icon -->
+  <link rel="icon" href="assets/img/favicon.png">
+  <!-- Site Title -->
+  <title>Loonatic Style</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/slick.min.css">
+  <link rel="stylesheet" href="assets/css/odometer.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    @media (max-width: 1198px) {
+
+      .cs_cursor_lg,
+      .cs_cursor_sm {
+        display: none;
+      }
+
+      .top-logo {
+        margin-top: 30%;
+        margin-left: 5%;
+        width: 70%;
+      }
+
+      .cs_nav_list {
+        margin-top: 10px;
+      }
+
+      .cs_menu_toggle {
+        margin-top: 20%;
+      }
+    }
+
+    @media (max-width: 991px) {
+
+      .cs_cursor_lg,
+      .cs_cursor_sm {
+        display: none;
+      }
+
+      .cs_nav_list {
+        margin-top: 10px;
+      }
+
+      .cs_hero_in {
+        margin-top: 100%;
+      }
+
+    }
+  </style>
+
+  <style>
+    /* Hero Section */
+    .hero-section {
+      background-image: url('assets/img/hero-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 0;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-family: ADrip;
+      font-size: 64px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-section p {
+      font-family: Sprite;
+      font-size: 22px;
+      margin-bottom: 40px;
+    }
+
+    .cs_button_primary {
+      padding: 15px 30px;
+      background-color: #FF76E9;
+      border-radius: 25px;
+      font-size: 18px;
+      color: #000;
+      font-family: Sprite;
+    }
+
+    .cs_button_primary:hover {
+      background-color: #ff2cc3;
+    }
+
+    /* Latest Drop Section */
+    .cs_product_card {
+      background-color: #1a1a1a;
+      padding: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cs_product_card:hover {
+      transform: scale(1.05);
+    }
+
+    .cs_product_img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .cs_product_card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.1);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .cs_product_card:hover::before {
+      opacity: 1;
+    }
+
+    /* Feature Section */
+    .features-section {
+      padding: 80px 0;
+      background-color: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .feature-item {
+      padding: 20px;
+    }
+
+    .feature-item i {
+      font-size: 48px;
+      color: #FF76E9;
+      margin-bottom: 20px;
+    }
+
+    /* Parallax Section */
+    .parallax-section {
+      background-image: url('assets/img/parallax-bg.jpg');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      padding: 150px 0;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cs_preloader cs_center cs_hero_shapes_1">
+    <div class="cs_preloader_in"></div>
+    <span>Loading</span>
+  </div>
+  <!-- Start Header Section -->
+  <header class="cs_site_header cs_style_1 cs_primary_color">
+    <div class="cs_main_header">
+      <div class="container">
+        <div class="cs_main_header_in"
+          style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+          <div class="cs_main_header_center" style="top:100px">
+            <a class="cs_site_branding" href="index.html">
+              <img src="assets/logo-footer.png" alt="Logo" class="top-logo">
+            </a>
+          </div>
+          <div class="cs_main_header_center"
+            style="top:200px; font-family: ADrip; font-size: 48px; -webkit-text-stroke: 0.5px #FF76E9;">
+            <div class="cs_nav">
+              <ul class="cs_nav_list">
+                <li><a href="#home"
+                    style="font-family: ADrip; font-size: 48px; -webkit-text-stroke: 0.5px #FF76E9;">Home</a></li>
+                <li class="menu-item-has-children">
+                  <a href=""
+                    style="font-family: ADrip; font-size: 48px;  -webkit-text-stroke: 0.5px #FF76E9;">Products</a>
+                  <ul style="font-family: ADrip; font-size: 35px; top:70px">
+                    <li><a href="blog.html"
+                        style="font-family: Sprite; font-size: 25px;  -webkit-text-stroke: 0.5px #FF76E9;">Latest
+                        Drop</a></li>
+                    <li><a href="item-detail.html"
+                        style="font-family: Sprite; font-size: 25px;  -webkit-text-stroke: 0.5px #FF76E9;">All
+                        Products</a></li>
+                  </ul>
+                </li>
+                <li><a href="#about"
+                    style="font-family: ADrip; font-size: 48px;  -webkit-text-stroke: 0.5px #FF76E9;">About</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End Header Section -->
+  <!-- Hero Section -->
+  <section class="cs_shape_wrap cs_blog_shapes_1 position-relative hero-section"
+    style="margin-top: 20%; margin-bottom: -7%;">
+    <h1>Loonatic X JOSHIE Edition</h1>
+    <p>The latest styles for the bold and fearless. Dive into the new drop today!</p>
+    <a href="#latest-drop" class="cs_button_primary" style="font-size: 20px;">Browse the Collection</a>
+  </section>
+
+  <!-- Latest Drop Section -->
+  <section class="cs_shape_wrap cs_blog_shapes_1 position-relative latest-drop"
+    style="margin-top: 10%; margin-bottom: -7%;">
+    <div class="container">
+      <div class="cs_section_heading cs_style1 text-center">
+        <h2 class="cs_section_title" style="font-family: ADrip; font-size: 60px; color: #FF76E9;">Featured Items</h2>
+      </div>
+      <div class="row">
+        <!-- Product 1 -->
+        <div class="col-md-4">
+          <div class="cs_product_card">
+            <img src="assets/images/kelly.png" alt="Latest Drop 1" class="cs_product_img">
+            <h3 style="font-family: ADrip; font-size: 24px; color: #FF76E9;">Loonatic Jacket</h3>
+            <p style="font-family: Sprite; font-size: 18px; color: #fff;">Limited Edition | Sleek & Bold</p><br>
+            <a href="#" class="cs_button_primary">Shop Now</a>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-4">
+          <div class="cs_product_card">
+            <img src="assets/images/koala.png" alt="Latest Drop 2" class="cs_product_img">
+            <h3 style="font-family: ADrip; font-size: 24px; color: #FF76E9;">Loonatic Hoodie</h3>
+            <p style="font-family: Sprite; font-size: 18px; color: #fff;">Comfort meets Style</p><br>
+            <a href="#" class="cs_button_primary">Shop Now</a>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-md-4">
+          <div class="cs_product_card">
+            <img src="assets/images/noodle.png" alt="Latest Drop 3" class="cs_product_img">
+            <h3 style="font-family: ADrip; font-size: 24px; color: #FF76E9;">Loonatic Sneakers</h3>
+            <p style="font-family: Sprite; font-size: 18px; color: #fff;">Street-ready Footwear</p><br>
+            <a href="#" class="cs_button_primary">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="cs_shape_wrap cs_blog_shapes_1 position-relative features-section"
+    style="margin-top: 10%; margin-bottom: -7%;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 feature-item">
+          <i class="fa fa-star"></i>
+          <h3>Exclusive Design</h3>
+          <p>Our new drop features limited edition pieces designed for the trendsetters.</p>
+        </div>
+        <div class="col-md-4 feature-item">
+          <i class="fa fa-heart"></i>
+          <h3>Premium Quality</h3>
+          <p>Crafted with premium materials to ensure comfort and durability.</p>
+        </div>
+        <div class="col-md-4 feature-item">
+          <i class="fa-solid fa-shirt"></i>
+          <h3>Bold Comfort</h3>
+          <p>Expertly designed for that perfect oversized fit with cutting-edge style.</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax Section -->
+  <section class="cs_shape_wrap cs_blog_shapes_1 position-relative parallax-section"
+    style="margin-bottom: -17%;">
+    <h2>Stand Out, Be Different.</h2>
+    <p>Join the Loonatic movement today.</p><br>
+    <a href="#" class="cs_button_primary">Shop the Drop</a>
+  </section>
+
+  <!-- Start Footer Section -->
+  <footer class="cs_footer cs_bg_filed cs_shape_wrap cs_footer_shapes_1">
+    <div class="container wow fadeIn" data-wow-duration="1s" data-wow-delay="0.35s">
+      <div class="cs_footer_row">
+        <div class="cs_footer_col">
+          <div class="cs_footer_widget">
+            <div class="cs_text_widget">
+              <img src="assets/logo-footer.png" alt="">
+              <p>Unleash your loonatic side</p>
+              <div class="cs_social_btns">
+                <a href="https://www.instagram.com/loonaticstyle/" target="_blank" class="cs_center"><i
+                    class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/message/6FCXLCOITHLBA1" target="_blank" class="cs_center"><i
+                    class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com/@loonaticstyle?_t=8oHXuv0VIxD&_r=1" target="_blank" class="cs_center"><i
+                    class="fa-brands fa-tiktok"></i></a>
+                <a href="http://shopee.co.id/loonaticstyle" target="_blank" class="cs_center"><i
+                    class="fa-solid fa-bag-shopping"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs_footer_col">
+          <div class="cs_footer_widget">
+            <h2 class="cs_footer_widget_title">Loonatic</h2>
+            <ul class="cs_footer_menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cs_footer_col">
+          <div class="cs_footer_widget">
+            <h2 class="cs_footer_widget_title">Data Protection</h2>
+            <ul class="cs_footer_menu">
+              <li><a href="#">Privacy & Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cs_footer_bottom">
+        <p class="mb-0 cs_copyright">Copyright <span id="yearNow"></span> Loonatic Style | All Right Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer Section -->
+
+  <!-- Script -->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/jquery.slick.min.js"></script>
+  <script src="assets/js/odometer.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -247,73 +247,31 @@ document.getElementById('yearNow').textContent = new Date().getFullYear();
     7. Accordian
   --------------------------------------------------------------*/
   function accordian() {
+    // Hide all accordion bodies initially
     $('.cs_accordian').children('.cs_accordian_body').hide();
-    $('.cs_accordian.active').children('.cs_accordian_body').show();
+  
+    // Handle accordion click events
     $('.cs_accordian_head').on('click', function () {
-      $(this)
-        .parent('.cs_accordian')
-        .siblings()
-        .children('.cs_accordian_body')
-        .slideUp(250);
-      $(this).siblings().slideDown(400);
-      $(this)
-        .parent()
-        .parent()
-        .siblings()
-        .find('.cs_accordian_body')
-        .slideUp(250);
-      /* Accordian Active Class */
-      $(this).parents('.cs_accordian').addClass('active');
-      $(this).parent('.cs_accordian').siblings().removeClass('active');
-      $(this)
-        .parents('.col-lg-6')
-        .siblings()
-        .find('.cs_accordian')
-        .removeClass('active');
+      var parentAccordian = $(this).parent('.cs_accordian');
+      var body = parentAccordian.children('.cs_accordian_body');
+      
+      // Check if this accordion is already open
+      if (parentAccordian.hasClass('active')) {
+        // Close the accordion if it's open
+        body.slideUp(400);
+        parentAccordian.removeClass('active');
+      } else {
+        // Open the accordion if it's closed
+        body.slideDown(400);
+        parentAccordian.addClass('active');
+      }
     });
-  }
+  }  
+
 
   /*--------------------------------------------------------------
     8. Cursor Animation
   --------------------------------------------------------------*/
-  // $(function () {
-  //   $('body').append('<span class="cs_cursor_lg d"></span>');
-  //   $('body').append('<span class="cs_cursor_sm"></span>');
-
-  //   $('.cs_view_mouse').on('mouseenter', function () {
-  //     $('.cs_cursor_lg').addClass('opacity-0');
-  //     $('.cs_cursor_sm').addClass('opacity-0');
-  //   });
-  //   $('.cs_view_mouse').on('mouseleave', function () {
-  //     $('.cs_cursor_lg').removeClass('opacity-0');
-  //     $('.cs_cursor_sm').removeClass('opacity-0');
-  //   });
-  // });
-
-  // function cursorMovingAnimation(event) {
-  //   try {
-  //     const timing = gsap.timeline({
-  //       defaults: {
-  //         x: event.clientX,
-  //         y: event.clientY,
-  //       },
-  //     });
-
-  //     timing
-  //       .to('.cs_cursor_lg', {
-  //         ease: 'power2.out',
-  //       })
-  //       .to(
-  //         '.cs_cursor_sm',
-  //         {
-  //           ease: 'power2.out',
-  //         },
-  //         '-=0.4',
-  //       );
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // }
   $(function () {
     $('body').append('<span class="cs_cursor_lg d"></span>');
     $('body').append('<span class="cs_cursor_sm"></span>');
